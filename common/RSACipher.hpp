@@ -106,7 +106,7 @@ namespace nkg {
             } else {
                 return BN_num_bits(Get()->n);
             }
-#elif (OPENSSL_VERSION_NUMBER & 0xffff0000) == 0x10100000     // openssl 1.1.x
+#elif (OPENSSL_VERSION_NUMBER & 0xffff0000) == 0x30000000     // openssl 1.1.x
             return RSA_bits(Get());
 #else
 #error "Unexpected openssl version!"
